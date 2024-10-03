@@ -1,4 +1,4 @@
-# data-exchange
+[![PyPI Latest Release](https://img.shields.io/pypi/v/data-exchange.svg)](https://pypi.org/project/data-exchange/)
 
 
 The DX class is designed to interact with the MKDX API for posting and retrieving sensor data. 
