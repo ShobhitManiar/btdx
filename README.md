@@ -26,9 +26,13 @@ The **dataexchange** library is designed to interact with the **Milton Keynes' B
     ```
 - From source
 
-    To install dataexcahnge from source you need [Request](https://requests.readthedocs.io/en/latest/). [request](https://pypi.org/project/requests/) can be installed from PyPI:
+    To install dataexcahnge from source, clone the repository from [here](https://github.com/ShobhitManiar/data-exchange). You will also need [requests](https://pypi.org/project/requests/) to install `dataexchange`. In your terminal type:
 
     ```sh 
+    pip install requests
+    ```
+    , and then, 
+    ```sh
     pip install .
     ```
 
@@ -73,6 +77,6 @@ To use the `dataexchange`, you need to import create an instance of `DX` first. 
  Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to submit a pull request or open an issue.
 
 ## License
- This project is licensed under the MIT License. See the **LICENSE** file for details.
+ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 [Go to Top](#table-of-contents)
