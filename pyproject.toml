@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm" ]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "data-exchange"
+description = "Designed to interact with the BT's DX platform"
+authors = [
+  { name="Shobhit Maniar", email="shobhitmaniar10@gmail.com" },
+]
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "twine",
+]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Database :: Database Engines/Servers",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development",
+    "Typing :: Typed"
+]
+
+[project.urls]
+Homepage = "https://github.com/ShobhitManiar/data-exchange"
+Issues = "https://github.com/ShobhitManiar/data-exchange/issues"
