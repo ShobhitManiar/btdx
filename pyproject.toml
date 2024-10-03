@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm" ]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "data-exchange"
-description = "Designed to interact with the BT's DX platform"
+name = "dataexchange"
+description = "Designed to interact with the Milton Keynes' BT DX platform"
 authors = [
   { name="Shobhit Maniar", email="shobhitmaniar10@gmail.com" },
 ]
@@ -13,7 +13,6 @@ readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
     "requests",
-    "twine",
 ]
 classifiers = [
     "Development Status :: 1 - Planning",

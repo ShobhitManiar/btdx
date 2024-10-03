@@ -1,10 +1,47 @@
-[![PyPI Latest Release](https://img.shields.io/pypi/v/data-exchange.svg)](https://pypi.org/project/data-exchange/)
+# Data Exchange Library
+
+[![PyPI Latest Release](https://img.shields.io/pypi/v/dataexchange.svg)](https://pypi.org/project/dataexchange/)
+
+The **dataexchange** library is designed to interact with the **Milton Keynes' BT Data Exchange Platform**. This README provides a guide on how to install, set up, and effectively use the `DX`.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+  - [1. Initialization](#1-initialization)
+  - [2. Posting Data](#2-posting-data)
+  - [3. Getting Data](#3-getting-data)
+- [Contributing](#contributing)
+- [License](#license)
 
 
-The DX class is designed to interact with the MKDX API for posting and retrieving sensor data. 
-Below is a guide on how to use the class effectively.
 
-1. **Initialization** To use the DX class, you need to initialize it with your API key, feed ID, and optionally a version number.
+## Installation
+
+- From PyPI (Python Package Index) 
+
+    You can install the `dataexchange` library using pip. Make sure you have `python >= 3.8` and pip installed on your machine, then,:
+
+    ```bash
+    pip install dataexchange
+    ```
+- From source
+
+    To install dataexcahnge from source you need [Request](https://requests.readthedocs.io/en/latest/). [request](https://pypi.org/project/requests/) can be installed from PyPI:
+
+    ```sh 
+    pip install .
+    ```
+
+    or in editable mode
+    ```sh 
+    pip install -e .
+    ```
+
+## Usage 
+
+To use the `dataexchange`, you need to import create an instance of `DX` first. Then use either `post` method to ingest data or `get` method to retrieve data
+
+1. **Initialization** To create an instance of the DX, provide your API key, feed ID, and optionally a version number..
    
    ```python
    from DX import DX  # Make sure to import the DX class from the module
@@ -31,3 +68,11 @@ Below is a guide on how to use the class effectively.
     # Retrieve last 100 values and display data
     dx.get(stream_id=stream_id, display=True, agregate=True)
     ``` 
+## Contributing
+
+ Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to submit a pull request or open an issue.
+
+## License
+ This project is licensed under the MIT License. See the **LICENSE** file for details.
+
+[Go to Top](#table-of-contents)
