@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "dataexchange"
+name = "btdx"
 description = "Designed to interact with the Milton Keynes' BT DX platform"
 authors = [
   { name="Shobhit Maniar", email="shobhitmaniar10@gmail.com" },
