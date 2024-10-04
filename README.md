@@ -22,7 +22,7 @@ The **btdx** library is designed to interact with the **Milton Keynes' BT Data E
     You can install the `btdx` library using pip. Make sure you have `python >= 3.8` and pip installed on your machine, then,:
 
     ```bash
-    pip install dataexchange
+    pip install btdx
     ```
 - From source
 
