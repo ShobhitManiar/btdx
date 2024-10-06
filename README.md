@@ -7,9 +7,9 @@ The **btdx** library is designed to interact with the **Milton Keynes' BT Data E
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-  - [1. Initialization](#1-initialization)
-  - [2. Posting Data](#2-posting-data)
-  - [3. Getting Data](#3-getting-data)
+  - [1. Initialization](1-initialization)
+  - [2. Posting Data](2-posting-data)
+  - [3. Getting Data](3-getting-data)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -19,27 +19,26 @@ The **btdx** library is designed to interact with the **Milton Keynes' BT Data E
 
 - From PyPI (Python Package Index) 
 
-    You can install the `btdx` library using pip. Make sure you have `python >= 3.8` and pip installed on your machine, then,:
+    You can install the `btdx` library using pip. Make sure you have `python >= 3.8` and pip installed on your machine, then,
 
     ```bash
     pip install btdx
     ```
 - From source
 
-    To install btdx from source, clone the repository from [here](https://github.com/ShobhitManiar/data-exchange). You will also need [requests](https://pypi.org/project/requests/) to install `btdx`. In your terminal type:
+    To install btdx from source, clone the repository from [here](https://github.com/ShobhitManiar/data-exchange). In your terminal type:
 
-    ```sh 
-    pip install requests
-    ```
-    , and then, 
     ```sh
     pip install .
     ```
-
     or in editable mode
     ```sh 
     pip install -e .
     ```
+    You will also need [requests](https://pypi.org/project/requests/) to use `btdx`
+    ```sh 
+    pip install requests
+    ``` 
 
 ## Usage 
 
