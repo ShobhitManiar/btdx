@@ -8,7 +8,7 @@ description = "Designed to interact with the Milton Keynes' BT DX platform"
 authors = [
   { name="Shobhit Maniar", email="shobhitmaniar10@gmail.com" },
 ]
-version = "0.0.1"
+version = "0.0.2"
 readme = "README.md"
 requires-python = ">=3.8"
 dependencies = [
