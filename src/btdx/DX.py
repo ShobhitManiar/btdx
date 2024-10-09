@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timedelta, timezone
 
 class DX:
-    def __init__(self, api_key:str, feed_id:str, version:float=1, delta:float|None =None):
+    def __init__(self, api_key:str, feed_id:str, version:float=1, delta:float=0):
         """
         Initializes the DX class.
 
@@ -63,7 +63,7 @@ class DX:
             print(f"An error occurred: {e}")
             return None
         
-    def get(self, stream_id:str, display:bool=False, agregate:bool|None = None):
+    def get(self, stream_id:str, display:bool=False, agregate:bool=False):
         """
         Sends a GET request to fetch the data stream.
 
