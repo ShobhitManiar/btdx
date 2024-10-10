@@ -2,7 +2,9 @@
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/btdx.svg)](https://pypi.org/project/btdx/)
 
-The **btdx** library is designed to interact with the **Milton Keynes' BT Data Exchange Platform**. This README provides a guide on how to install, set up, and effectively use the `DX`.
+The **btdx** library is designed to interact with the **Milton Keynes' BT Data Exchange Platform**. This README provides a guide on how to install, set up, and effectively use the `DX` class.
+
+<div align="center" >🤝 Show your support - give a ⭐️ if you find this library useful</div>
 
 ## Table of Contents
 - [Installation](#installation)
@@ -52,7 +54,7 @@ To use the `btdx`, you need to create an instance of `DX` first. Then use either
      api_key = "your_api_key"     # Your API key
      feed_id = "your_feed_id"     # The feed ID you want to interact with
      version = 1                  # Optional: Version number (default is 1)
-     DX = DX(api_key, feed_id, version)
+     response = DX(api_key, feed_id, version)
      ```
 
 2. #### Posting Data
@@ -61,7 +63,7 @@ To use the `btdx`, you need to create an instance of `DX` first. Then use either
     ```python
     stream_id = "100"           # The ID of the stream you want to post data to
     data =  "AQI: 2"         # The value you want to post
-    DX.post(stream_id=stream_id, data=data)
+    response.post(stream_id=stream_id, data=data)
     ```
 
 5. #### Getting Data
@@ -70,12 +72,12 @@ To use the `btdx`, you need to create an instance of `DX` first. Then use either
     ```python
     stream_id = "100"           # The ID of the stream you want to get data from
     # Retrieve and display data
-    DX.get(stream_id=stream_id, display=True)
+    response.get(stream_id=stream_id, display=True)
     ```
    You can also pass optional parameters such as agregate.
    ```python
     # Retrieve last 100 values and display data
-    DX.get(stream_id=stream_id, display=True, agregate=True)
+    response.get(stream_id=stream_id, display=True, agregate=True)
     ``` 
 ## Contributing
 
