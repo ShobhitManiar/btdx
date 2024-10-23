@@ -1,4 +1,4 @@
-# BTDX Library ()
+# BTDX Library
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/btdx.svg)](https://pypi.org/project/btdx/)
 
