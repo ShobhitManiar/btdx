@@ -1,6 +1,7 @@
 import requests
 import json
 from datetime import datetime, timedelta, timezone
+import urllib.parse
 
 class DX:
     def __init__(self, api_key:str, feed_id:str, version:float=1, delta:float=0):
@@ -63,22 +64,37 @@ class DX:
             print(f"An error occurred: {e}")
             return None
         
-    def get(self, stream_id:str, display:bool=False, agregate:bool=False):
+    def get(self, stream_id:str, start:str=None, end:str=None, agregate:bool=False, display:bool=False):
         """
         Sends a GET request to fetch the data stream.
 
         :param stream_id: Required. Stream ID to fetch the data.
+        :param start: Optional. Start date for data range in YYYY-MM-DD format.
+        :param end: Optional. End date for data range in YYYY-MM-DD format.
+        :param aggregate: Optional. If True, aggregate the data. Default is False.
         :param display: Optional. If True, display the fetched data. Default is False.
         """
         self.get_stream_id = stream_id
+        try:
+            start_iso = urllib.parse.quote(datetime.strptime(start, "%Y-%m-%d").isoformat() + 'Z') if start else None
+            end_iso = urllib.parse.quote(datetime.strptime(end, "%Y-%m-%d").isoformat() + 'Z') if end else None
+        except ValueError:
+            print("Invalid date format. Please enter date in YYYY-MM-DD format.")
+
+        self.base_url = f"https://api.mkdx.btcsp.co.uk/data-service/sensors/feeds/{self.feed_id}/{self.version}/datastream/{self.get_stream_id}"
+        
         if not self.api_key:
             print("Please enter your API key.")
             return None
         self.agregate = agregate if agregate is not None else False
         if self.agregate:
-            self.get_url = f"https://api.mkdx.btcsp.co.uk/data-service/sensors/feeds/{self.feed_id}/{self.version}/datastream/{self.get_stream_id}/datapoints?limit=100"
+            if(start and end ):
+                self.get_url = f"{self.base_url}/datapoints?start={start_iso}&end={end_iso}&limit=100"
+            else:
+                self.get_url = f"{self.base_url}/datapoints?limit=100"
+
         else:
-            self.get_url = f"https://api.mkdx.btcsp.co.uk/data-service/sensors/feeds/{self.feed_id}/{self.version}/datastream/{self.get_stream_id}"
+            self.get_url = self.base_url
 
         try:
             response = requests.get(self.get_url, headers=self.header)

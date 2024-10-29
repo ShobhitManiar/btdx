@@ -76,8 +76,11 @@ To use the `btdx`, you need to create an instance of `DX` first. Then use either
     ```
    You can also pass optional parameters such as agregate.
    ```python
-    # Retrieve last 100 values and display data
-    response.get(stream_id=stream_id, display=True, agregate=True)
+    # Retrieve last 100 values between a date range and display data, if no range is provided last 100 values from current time will be obtained.
+
+    start="YYYY-MM-DD"
+    end="YYYY-MM-DD"
+    response.get(stream_id=stream_id, start=start, end=end, display=True, agregate=True)
     ``` 
 ## Contributing
 
