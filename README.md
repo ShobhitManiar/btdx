@@ -1,6 +1,6 @@
 # BTDX Library
 
-[![PyPI Latest Release](https://img.shields.io/pypi/v/btdx.svg)](https://pypi.org/project/btdx/)
+[![PyPI Latest Release](https://img.shields.io/pypi/v/btdx.svg)](https://pypi.org/project/btdx/)![PyPI Downloads](https://static.pepy.tech/badge/btdx)[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/btdx)
 
 The **btdx** library is designed to interact with the **Milton Keynes' BT Data Exchange Platform**. This README provides a guide on how to install, set up, and effectively use the `DX` class.
 
